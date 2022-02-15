@@ -6,7 +6,7 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 21:32:07 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/15 22:14:34 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/15 22:56:59 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,16 @@ static int verify_width_map(t_module *module, char *content, int height_now)
 		if(((int)ft_strlen(content)) - 1 != module->map->width)
 			return (error(5, "Wrong contruction of the map!"));
 		content[module->map->width] = '\0';
-		return (0);		
+		return (0);
+	}
+	if(ft_verify_str(content, "10ECPJ", module->map->width) == 0)
+	{
+		if (content[0] != '1' || content[module->map->width - 1] != '1')
+			return (error(5, "Wrong contruction of the map!"));
+		if (((int)ft_strlen(content)) - 1 != module->map->width)
+			return (error(5, "Wrong contruction of the map!"));
+		content[module->map->width] = '\0';
+		return (0);
 	}
 	return (error(5, "Wrong construction of the map, letter not allowed!"));
 }

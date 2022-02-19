@@ -6,7 +6,7 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 20:24:49 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/19 16:11:03 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:39:32 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	str[i] = '\0';
-		return (str);
+	return (str);
 }

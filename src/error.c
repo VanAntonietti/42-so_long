@@ -6,7 +6,7 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 15:21:07 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/19 15:21:10 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:32:33 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int	close_all(t_module *module)
 	free_ptr((void **)&module->coin);
 	free_ptr((void **)&module);
 	exit(0);
-	return (0);
 }
 
 int	error(int errnum, char *message)

@@ -6,7 +6,7 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 15:26:09 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/19 15:26:11 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:39:29 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ void	move(t_module *module, int x, int y, int eye)
 		module->player->player_eye = eye;
 	else if (res == 2)
 	{
-		ft_printf("\033[32mYOU WIN!\n\033[0");
+		ft_printf("\033[32mYOU WIN!\n\033[0m");
 		module->end_game = TRUE;
 	}
 	else if (res == 3)
 	{
-		ft_printf("\033[31mGAME OVER!\n\033[0");
+		ft_printf("\033[31mGAME OVER!\n\033[0m");
 		module->end_game = TRUE;
 	}
 }

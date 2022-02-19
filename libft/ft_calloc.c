@@ -6,24 +6,19 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:39:55 by vantonie          #+#    #+#             */
-/*   Updated: 2021/11/13 17:39:27 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/19 16:26:18 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t n, size_t m)
+void	*ft_calloc(size_t nelem, size_t size)
 {
 	void	*p;
-	void	*d;
 
-	p = malloc(n * m);
+	p = malloc(nelem * size);
 	if (p == 0)
-	{
 		return (p);
-	}
-	ft_bzero(p, n * m);
-	d = p;
-	free(p);
-	return (d);
+	ft_bzero(p, nelem * size);
+	return (p);
 }

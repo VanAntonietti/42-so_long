@@ -6,12 +6,12 @@
 #    By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 20:19:33 by vantonie          #+#    #+#              #
-#    Updated: 2022/02/15 20:34:25 by vantonie         ###   ########.fr        #
+#    Updated: 2022/02/19 16:01:00 by vantonie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
-NAME = so_long_bonus
+NAME_BONUS = so_long_bonus
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -21,29 +21,29 @@ LIBFT = ./libft/libft.a
 
 MINILIBX = ./minilibx/libmlx_Linux.a
 
-SRC = 	so_long.c \
-		error.c \
-		start_game_bonus.c \
-		utils.c \
-		move.c \
-		verify_map.c \
-		hooks.c \
-		print_map.c \
-		print_map_utils.c \
+SRC = 	so_long.c			\
+		error.c				\
+		start_game.c		\
+		utils.c				\
+		move.c				\
+		verify_map.c		\
+		hooks.c				\
+		print_map.c			\
+		print_map_utils.c	\
 
-SRC_BONUS = 	so_long_bonus.c \
-				error_bonus.c \
-				start_game_bonus.c \
-				utils_bonus.c \
-				move_bonus.c \
-				verify_map_bonus.c \
-				hooks_bonus.c \
-				print_map_bonus.c \
-				print_map_utils_bonus.c \
+SRC_BONUS	= 	so_long_bonus.c			\
+				error_bonus.c			\
+				start_game_bonus.c		\
+				utils_bonus.c			\
+				move_bonus.c			\
+				verify_map_bonus.c		\
+				hooks_bonus.c			\
+				print_map_bonus.c		\
+				print_map_utils_bonus.c	\
 
-OBJS = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
-OBJS_BONUS = $(SRC_BONUS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -53,7 +53,7 @@ $(NAME): $(LIBFT) $(MINILIBX)
 $(LIBFT):
 	make others -C ./libft
 
-$(MINILIBX)
+$(MINILIBX):
 	cd ./minilibx && ./configure
 
 bonus: $(NAME_BONUS)
@@ -83,4 +83,4 @@ valgrind: all
 valgrindbonus: bonus
 	valgrind -s --show-leak-kinds=all --track-origins=yes  --leak-check=full ./$(NAME_BONUS) "./assets/maps/map_3.ber"
 
-.PHONY: all bonus clean fclean re teste testebonus valgrind valgrindbonus	
+.PHONY: all bonus clean fclean re teste testebonus valgrind valgrindbonus

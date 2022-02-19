@@ -6,7 +6,7 @@
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:54:35 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/04 14:39:37 by vantonie         ###   ########.fr       */
+/*   Updated: 2022/02/19 16:01:31 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ typedef enum e_bool {TRUE = 1, FALSE = 0}	t_bool;
 # else
 #  define IS_MACOS 0
 # endif
-
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648

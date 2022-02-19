@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   verify_map.c                                       :+:      :+:    :+:   */
+/*   verify_map_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 21:32:07 by vantonie          #+#    #+#             */
-/*   Updated: 2022/02/19 15:31:21 by vantonie         ###   ########.fr       */
+/*   Created: 2022/02/19 15:26:56 by vantonie          #+#    #+#             */
+/*   Updated: 2022/02/19 15:26:57 by vantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 static int	verify_width_map(t_module *module, char *content, int height_now)
 {
